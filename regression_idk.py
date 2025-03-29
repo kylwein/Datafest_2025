@@ -63,7 +63,6 @@ print("Leasing vs. Market Conditions")
 print("Mean Squared Error:", mse)
 print("R^2 Score:", r2)
 
-# Plot Actual vs. Predicted Leasing values
 plt.figure(figsize=(8, 5))
 plt.scatter(y_test, y_pred, alpha=0.7)
 plt.title("Impact of Occupancy and Unemployment on Leasing Activity")
@@ -79,9 +78,6 @@ print('\nIs stepwise better?')
 '''
 Does stepwise give better results?
 '''
-
-from mlxtend.feature_selection import SequentialFeatureSelector as SFS
-
 
 
 candidate_predictors = [
@@ -102,7 +98,6 @@ reg_df = merged_df[candidate_predictors + ['leasing']].dropna()
 X = reg_df[candidate_predictors]
 y = reg_df['leasing']
 
-#  bidirectional stepwise selection
 sfs = SFS(
     estimator=LinearRegression(),
     k_features='best',
