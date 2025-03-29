@@ -5,6 +5,8 @@ import scipy.stats as stats
 
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 1200)
+pd.set_option('display.float_format', lambda x: f'{x:,.0f}')
+
 
 leases_df = pd.read_csv("../Leases.csv")
 occupancy_df = pd.read_csv("../Major Market Occupancy Data-revised.csv")
@@ -32,6 +34,9 @@ time_summary = northeast_df.groupby(['year', 'quarter']).agg(
 ).reset_index()
 print("\nTime Trends (Leasing)")
 print(time_summary.to_string(index=False))
+
+
+
 
 #TIME PLOT
 plt.figure(figsize=(10, 6))

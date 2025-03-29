@@ -58,3 +58,10 @@ Explore how commercial leasing and occupancy rates evolved from 2018 to 2024
 
 Strong link between occupancy (from Kastle data) and leasing activity
 
+**Update 3:30**
+
+Focus on 3 niche topics, weave together industry, location, time period(covid)
+
+
+
+
