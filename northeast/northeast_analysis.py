@@ -87,3 +87,8 @@ t_stat, p_val = stats.ttest_ind(classA_leased, classO_leased, equal_var=False)
 print("Two-sample t-test for leasedSF between Class A and Class O:")
 print("T-val:", t_stat)
 print("P-value:", p_val)
+
+
+print('--------------------------------------------------------------------------------------\n')
+
+
